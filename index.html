@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium homes, apartments and investment properties in Lagos with Havenstone Realty.">
+  <title>Havenstone Realty | Find Your Place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8e0278b98b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <div class="topbar">
+    <div class="container topbar-inner">
+      <span>A better sense of place, in Lagos.</span>
+      <div>
+        <span>☎ +234 803 555 0198</span>
+        <span class="top-email">✉ hello@havenstone.example</span>
+      </div>
+    </div>
+  </div> -->
+  <aside class="demo-banner" id="demoBanner" aria-labelledby="demoBannerTitle">
+    <div class="container demo-banner-inner">
+      <p><strong id="demoBannerTitle">Demo website:</strong> Listings, photos, and contact details are examples, not real offers or agency information. Enquiries aren’t sent.</p>
+      <button class="demo-banner-dismiss" id="demoBannerDismiss" type="button" aria-label="Dismiss demo notice">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+  </aside>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Havenstone Realty home"><span class="brand-mark">H</span><span>HAVENSTONE<small>REALTY & PROPERTY</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="#home" class="active">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a class="nav-cta" href="#contact">Book a viewing <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div><div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div class="eyebrow light"><span></span> A MORE PERSONAL WAY TO FIND HOME</div>
+        <h1>Find your own<br>side of <em>Lagos.</em></h1>
+        <p>From first apartment to forever home, find a place that fits the way you want to live.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#properties">Explore properties</a>
+          <a class="text-link light-link" href="#about">Get to know us <span><i class="fa-solid fa-arrow-right"></i></span></a>
+        </div>
+        <div class="hero-note">
+          <span class="note-line"></span>
+          <span>Start with the neighbourhood. Find your place from there.</span>
+        </div>
+      </div>
+      <div class="hero-counter"><strong>LAGOS</strong><span>NIGERIA · SAMPLE LISTINGS</span></div>
+    </section>
+    <section class="search-section">
+      <div class="container search-panel">
+        <div class="search-intro">
+          <span class="small-label">MAKE IT YOURS</span><h2>Start with<br>what matters.</h2>
+        </div>
+        <form id="searchForm" class="search-form">
+          <label>I'm looking to
+            <select id="purpose">
+              <option value="all">Any purpose</option>
+              <option value="Sale">Buy a property</option>
+              <option value="Rent">Rent a property</option>
+            </select>
+          </label>
+          <label>Property type
+            <select id="propertyType">
+              <option value="all">All property types</option>
+              <option value="Apartment">Apartment</option>
+              <option value="House">House</option>
+              <option value="Duplex">Duplex</option>
+            </select>
+          </label>
+          <label>Preferred location
+            <select id="location">
+              <option value="all">All locations</option>
+              <option value="Lekki">Lekki</option>
+              <option value="Victoria Island">Victoria Island</option>
+              <option value="Ikoyi">Ikoyi</option>
+              <option value="Ikeja">Ikeja</option>
+              <option value="Ikorodu">Ikorodu</option>
+            </select>
+          </label>
+          <button class="button button-dark" type="submit">Find a property <span><i class="fa-solid fa-magnifying-glass"></i></span></button>
+        </form>
+      </div>
+    </section>
+    <section class="section properties-section" id="properties">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow"><span></span> FIND YOUR NEXT ADDRESS</div><h2>Good homes, in the<br>right <em>neighbourhood.</em></h2></div><a class="text-link dark-link" href="#contact">Ask us a question <span>→</span></a></div>
+        <div class="filter-row"><p id="resultsLabel" aria-live="polite">Loading sample properties…</p><div class="quick-filters"><button class="filter-chip selected" data-filter="all">All homes</button><button class="filter-chip" data-filter="Sale">For sale</button><button class="filter-chip" data-filter="Rent">For rent</button></div></div>
+        <div class="property-grid" id="propertyGrid">
+        </div>
+        <div class="empty-state" id="emptyState" hidden><h3>No homes match those filters just yet.</h3><p>Try a different location or broaden your search.</p><button class="button button-dark" id="resetFilters">Reset filters</button></div>
+      </div>
+    </section>
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="Images/about-section.jpeg" alt="Warm, thoughtfully designed living space">
+          <div class="experience-card">
+            <strong>01</strong><span>A clearer search<br>starts with you</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow light">
+            <span></span> A MORE HUMAN APPROACH
+          </div>
+          <h2>Find a home that<br>fits your <em>everyday.</em></h2>
+          <p class="about-lead">The right home is about more than the listing. It should make sense for your plans, your people, and the way you live.</p>
+          <p>Explore the areas, compare the details, and tell us what matters most. This sample experience is designed to make the next step feel a little clearer.</p>
+          <a href="#contact" class="button button-gold">Tell us what you need <span>→</span></a>
+          <div class="signature">A more considered move. <span>— Havenstone Realty</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading centered">
+          <div class="eyebrow"><span></span> HOW WE CAN HELP</div>
+          <h2>Clear advice. <em>Confident moves.</em></h2>
+          <p>Whether you’re buying your first home or managing a growing portfolio, we make the process feel simpler.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+            <h3>Buy a home</h3>
+            <p>Find a home that fits your lifestyle, priorities, and plans for the future.</p>
+            <a href="#contact" data-interest="buy">Explore buying <span>→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <div class="service-icon"><i class="fa-solid fa-key"></i></div>
+            <h3>Rent with ease</h3>
+            <p>Explore well-presented homes and get clear guidance at every step.</p>
+            <a href="#contact" data-interest="rent">Explore rentals <span>→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Sell or let</h3>
+            <p>Thoughtful marketing and practical support to help you reach the right people.</p>
+            <a href="#contact" data-interest="sell">Talk to our team <span>→</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
+            <h3>Property advisory</h3>
+            <p>Make more informed property decisions with grounded local insight.</p>
+            <a href="#contact" data-interest="advice">Get advice <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="process-section" aria-labelledby="processHeading">
+      <div class="container process-inner">
+        <div class="eyebrow light"><span></span> A GOOD MOVE, MADE CLEARER</div>
+        <h2 id="processHeading">Less guesswork.<br><em>More good decisions.</em></h2>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Tell us what matters</h3>
+            <p>Share your budget, timing, and the details that will make a place feel right.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Explore your options</h3>
+            <p>Compare sample homes by area, type, and whether you want to buy or rent.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Take the next step</h3>
+            <p>Ask a question or arrange a viewing when you are ready to move forward.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow"><span></span> LET’S TALK PROPERTY</div>
+          <h2>Your next move<br>starts with a <em>hello.</em></h2>
+          <p>Tell us what you’re looking for. We’ll help you work out the next step, without the pressure.</p>
+          <div class="contact-detail">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <small>CALL OUR TEAM</small><strong>+234 803 555 0198</strong>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <small>WRITE TO US</small><strong>hello@havenstone.example</strong>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>How can we help you?</h3>
+          <p>Leave a few details and our team will be in touch.</p>
+          <div class="form-row">
+            <label>Your name<input required name="name" placeholder="e.g. Tola Adeyemi"></label>
+            <label>Email address<input required type="email" name="email" placeholder="you@example.com"></label>
+          </div>
+          <div class="form-row">
+            <label>I'm interested in
+              <select name="interest">
+                <option value="buy">Buying a property</option>
+                <option value="rent">Renting a property</option>
+                <option value="sell">Selling or letting</option>
+                <option value="advice">Property advice</option>
+              </select>
+            </label>
+            <label>Preferred location<input name="preferredLocation" placeholder="e.g. Lekki, Ikoyi"></label>
+          </div>
+          <label>Tell us a little more
+            <textarea name="message" rows="4" placeholder="Budget, timeline, must-haves..."></textarea>
+          </label>
+          <button class="button button-dark submit-button" type="submit">Send an enquiry <span><i class="fa-solid fa-paper-plane"></i></span></button>
+          <p class="form-feedback" id="formFeedback" role="status"></p>
+          <small class="form-note">Demo form: your details are not sent to a real agency.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="#home">
+        <span class="brand-mark">H</span>
+        <span>HAVENSTONE<small>REALTY & PROPERTY</small></span>
+      </a>
+      <p>Helping you find a place<br>to belong, one move at a time.</p>
+      <div class="footer-links">
+        <a href="#properties">Properties</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Havenstone Realty. Demonstration website.</span>
+      <span>Designed for better moves.</span>
+    </div>
+  </footer>
+  
+  <dialog class="property-dialog" id="propertyDialog" aria-labelledby="dialogPropertyTitle">
+    <div class="property-dialog-content">
+      <button class="property-dialog-close" id="dialogClose" type="button" aria-label="Close property details">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="property-dialog-gallery">
+        <img class="property-dialog-image" id="dialogImage" src="" alt="">
+        <div class="property-dialog-thumbnails" id="dialogThumbnails" aria-label="More property photos"></div>
+      </div>
+      <div class="property-dialog-info">
+        <span class="property-dialog-status" id="dialogStatus"></span>
+        <p class="property-dialog-location" id="dialogLocation"></p>
+        <h2 id="dialogPropertyTitle"></h2>
+        <p class="property-dialog-price" id="dialogPrice"></p>
+        <p class="property-dialog-description" id="dialogDescription"></p>
+        <div class="property-dialog-specs" id="dialogSpecs"></div>
+        <div class="property-dialog-extras" id="dialogExtras"></div>
+        <button class="button button-dark property-dialog-enquire" id="dialogEnquire" type="button">
+          Enquire about this property
+          <span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="demo-notice-dialog" id="demoNoticeDialog" aria-labelledby="demoNoticeTitle">
+    <div class="demo-notice-content">
+      <button class="property-dialog-close" id="demoNoticeClose" type="button" aria-label="Close demo notice">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <span class="demo-notice-icon" aria-hidden="true">
+        <i class="fa-solid fa-circle-info"></i>
+      </span>
+      <h2 id="demoNoticeTitle">This is a demo website</h2>
+      <p>Your message has not been sent. This demo form isn’t connected to an agency, so no one will receive your enquiry.</p>
+      <button class="button button-dark demo-notice-dismiss" id="demoNoticeDismiss" type="button">Got it</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
